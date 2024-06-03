@@ -1,0 +1,38 @@
+#############################################################
+#     Packages and Applications for a macOS base setup      #
+#                                                           #
+# Owner: Hajnalka Marki                                     #
+#############################################################
+
+cask_args appdir: '/Applications'           # Path to install
+
+# Taps
+# Upgrade outdated apps (Homebrew Cask, info: brew cu)
+tap 'bou/cask-upgrade'
+
+#############################################################
+#                    CLI ESSENTIALS                         #
+#               macOS base CLI essentials                   #
+#############################################################
+
+brew 'git'         # Git for version control
+brew 'jq'          # JSON parser for JSON outputs and queries
+brew 'tree'        # List directories in a tree structure
+
+#############################################################
+#                      DEV PACKAGES                         #
+#         macOS apps and packages for development           #
+#############################################################
+
+brew 'gh'          # GitHub CLI
+brew 'python'      # Python interpreter
+brew 'docker'      # Container management
+
+###########################Apps##############################
+
+# API testing
+cask 'postman'
+# Visual Studio Code - code editor
+cask 'visual-studio-code'
+# DBeaver Community Edition
+cask 'dbeaver-community'
