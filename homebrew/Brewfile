@@ -36,3 +36,12 @@ cask 'postman'
 cask 'visual-studio-code'
 # DBeaver Community Edition
 cask 'dbeaver-community'
+
+#############################################################
+#                      MODS PACKAGES                        #
+#               macOS Mods - apps and packages              #
+#############################################################
+
+###########################Apps##############################
+cask 'alt-tab'     # Alt-tab window switcher
+cask 'copyq'       # Clipboard manager
