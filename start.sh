@@ -38,3 +38,6 @@ ssh-keygen -t rsa -b 2048
 
 # Type yes when first cloning a repository, so that GH can be added to the known SSH hosts:
 # Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+
+# Set the same e-mail address that your GH account is associated with:
+# git config --global user.email test@abcd.com
