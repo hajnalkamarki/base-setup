@@ -63,6 +63,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
 # Add plugin cfg into the .zshrc file
 
+# Setup zsh-history-search
+git clone https://github.com/zsh-users/zsh-history-substring-search
+# Add plugin cfg into the .zshrc file
+
 # Add 'web-search' to zshrc plugins
 
 # To apply changes type 'source ~/.zshrc'
