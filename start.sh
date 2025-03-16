@@ -16,7 +16,8 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-# 1. Install Homebrew
+###### Basics ######
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Add to PATH
 PATH=$PATH:/opt/homebrew/bin
@@ -24,13 +25,14 @@ echo export PATH=$PATH:/opt/homebrew/bin >> ~/.zshrc
 # Test with 'brew doctor'
 brew doctor
 
-# 2. Create 'Projects' folder
+# Create 'Projects' folder
 mkdir -p /Users/${user_dir}/Projects
 
-# 3. Install Git
+###### Version Control ######
+# Install Git
 brew install git
 
-# 4. Setup SSH key for GH
+# Setup SSH key for GH
 mkdir -p /Users/${user_dir}/.ssh
 cd /Users/${user_dir}/.ssh
 ssh-keygen -t rsa -b 2048
@@ -41,3 +43,26 @@ ssh-keygen -t rsa -b 2048
 
 # Set the same e-mail address that your GH account is associated with:
 # git config --global user.email test@abcd.com
+
+###### Install OhMyZsh ######
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Powerlevel10K theme for OhMyZsh
+cd /Users/${user_dir}/.oh-my-zsh/custom/themes/
+git clone https://github.com/romkatv/powerlevel10k.git
+
+# In the .zshrc file set ZSH_THEME="powerlevel10kp/powerlevel10k"
+# Setup based on https://www.youtube.com/watch?v=CF1tMjvHDRA
+
+# Setup zsh-autosuggestions plugin
+cd /Users/${user_dir}/.oh-my-zsh/custom/plugins/
+git clone https://github.com/zsh-users/zsh-autosuggestions
+# Add plugin cfg into the .zshrc file
+
+# Setup zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting
+# Add plugin cfg into the .zshrc file
+
+# Add 'web-search' to zshrc plugins
+
+# To apply changes type 'source ~/.zshrc'
